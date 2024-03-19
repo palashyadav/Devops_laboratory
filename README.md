@@ -22,3 +22,17 @@ Examples:
 	```bash
 	curl -X POST -H "Content-Type: application/json" -d '{"hello":"world"}' http://localhost:5000/echo
 	```
+
+Running tests:
+
+1. Install dev deps and run tests for `simple_tasker`:
+
+```bash
+make test
+```
+
+2. Use the health check helper after bringing services up:
+
+```bash
+./scripts/check_health.sh
+```
