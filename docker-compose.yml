@@ -12,3 +12,20 @@ services:
       interval: 10s
       timeout: 5s
       retries: 3
+  tasker:
+    build: ./simple_tasker
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+  php:
+    build: ./php_service
+    ports:
+      - "9000:9000"
+    restart: unless-stopped
+    environment:
+      - PHP_ENV=production
