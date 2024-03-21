@@ -14,6 +14,10 @@ switch ($uri) {
     case '/ping':
         echo json_encode(['pong' => true]);
         break;
+    case '/echo':
+        $data = json_decode(file_get_contents('php://input'), true);
+        echo json_encode(['echo' => $data ?? []]);
+        break;
     default:
         http_response_code(404);
         echo json_encode(['error' => 'Not found']);
