@@ -36,3 +36,9 @@ make test
 ```bash
 ./scripts/check_health.sh
 ```
+
+Services overview:
+
+- **Flask web**: basic echo and health endpoints (port 5000)
+- **FastAPI tasker**: reverse string endpoint (port 8000)
+- **PHP service**: status and ping endpoints (port 9000)
