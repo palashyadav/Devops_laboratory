@@ -20,3 +20,9 @@ test:
 	python -m pip install -r simple_tasker/requirements.txt
 	python -m pip install pytest
 	pytest simple_tasker/tests
+
+compose-up:
+	docker-compose up --build
+
+compose-down:
+	docker-compose down
