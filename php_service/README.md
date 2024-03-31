@@ -6,5 +6,6 @@ Endpoints:
 - `/` — service info
 - `/status` — server status and timestamp
 - `/ping` — simple pong response
+- `/echo` — echo request body
 
 Run with docker-compose from repo root.
